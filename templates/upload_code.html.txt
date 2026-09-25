@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Suspicious Code</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Upload Suspicious Code</h1>
+
+        <p>
+            Select the code file that you want to
+            check for plagiarism or code cloning.
+        </p>
+
+        {% if message %}
+            <p style="color: red; font-weight: bold;">
+                {{ message }}
+            </p>
+        {% endif %}
+
+        <form method="POST"
+              enctype="multipart/form-data">
+
+            <input
+                type="file"
+                name="code_file"
+                required
+                style="margin:20px;"
+            >
+
+            <br>
+
+            <button
+                type="submit"
+                class="btn"
+                style="border:none; cursor:pointer;"
+            >
+                Upload & Check Code
+            </button>
+
+        </form>
+
+        <p style="margin-top:25px;">
+            <a href="{{ url_for('dashboard') }}">
+                Back to Dashboard
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
