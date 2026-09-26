@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Source Files</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>Upload Source Files</h1>
+
+        <p>
+            Upload the original source-code files
+            that will be used for comparison.
+        </p>
+
+        {% if message %}
+            <p style="color: green; font-weight: bold;">
+                {{ message }}
+            </p>
+        {% endif %}
+
+        <form method="POST"
+              enctype="multipart/form-data">
+
+            <input
+                type="file"
+                name="source_files"
+                multiple
+                required
+                style="margin:20px;"
+            >
+
+            <br>
+
+            <button
+                type="submit"
+                class="btn"
+                style="border:none; cursor:pointer;"
+            >
+                Upload Source Files
+            </button>
+
+        </form>
+
+        <p style="margin-top:25px;">
+            <a href="{{ url_for('dashboard') }}">
+                Back to Dashboard
+            </a>
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

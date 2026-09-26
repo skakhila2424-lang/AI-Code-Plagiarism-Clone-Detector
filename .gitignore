@@ -4,3 +4,5 @@ venv/
 .env
 database.db
 uploads/
+*.txt
+*.txt
