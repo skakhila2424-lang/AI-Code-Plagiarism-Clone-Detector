@@ -1,8 +1,0 @@
-code1,code2,label
-"def add(a,b): return a+b","def add(x,y): return x+y",Similar
-"def multiply(x,y): return x*y","def product(a,b): return a*b",Similar
-for i in range(10): print(i),for number in range(10): print(number),Similar
-def square(n): return n*n,def square(x): return x*x,Similar
-"numbers = [1,2,3,4,5]
-print(sum(numbers))","values = [1,2,3,4,5]
-print(sum(values))",Similar
